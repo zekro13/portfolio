@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-16T01:37:37.592Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="uDhatL3gVFpRjz1NhbZT" version="20.0.1" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-16T09:07:22.182Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="JBSNU68dlgMl-cOVDZnm" version="20.0.1" type="github">
   <diagram id="JZuph2feazxbAIMACFCP" name="Page-1">
     <mxGraphModel dx="920" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -119,8 +119,8 @@
         <mxCell id="x77DFa1c3BVoNbzdy2U2-10" value="Session[&quot;auth_status&quot;]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="330" y="500" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="x77DFa1c3BVoNbzdy2U2-12" value="&lt;div style=&quot;&quot;&gt;auth_code = User.query.filter_by(email=email).auth_code&lt;/div&gt;if auth_code&amp;nbsp;== len(generate_key()):&lt;br&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;blockquote style=&quot;margin: 0 0 0 40px; border: none; padding: 0px;&quot;&gt;if&amp;nbsp;session[&quot;auth_status&quot;] != &quot;authenticated&quot;:&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;return redirect(url_for(&#39;auth_page&#39;))&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;elif auth_status == &#39;yes&#39;:&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;C&lt;/span&gt;ontinue Code&lt;/span&gt;&lt;/div&gt;&lt;/blockquote&gt;&lt;div style=&quot;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;elif&amp;nbsp;&lt;/span&gt;auth_code&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;!= len(generate_key()):&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;span style=&quot;&quot;&gt;	&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;	&lt;/span&gt;return redirect(url_for(&#39;dashboard&#39;))&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="510" y="760" width="380" height="130" as="geometry" />
+        <mxCell id="x77DFa1c3BVoNbzdy2U2-12" value="&lt;div style=&quot;&quot;&gt;&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;auth_code = User.query.filter_by(&lt;span style=&quot;color:#aa4926;&quot;&gt;email&lt;/span&gt;=email).first().auth_code&lt;br&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;if &lt;/span&gt;&lt;span style=&quot;color:#8888c6;&quot;&gt;len&lt;/span&gt;(auth_code) == &lt;span style=&quot;color:#8888c6;&quot;&gt;len&lt;/span&gt;(id_generator()):&lt;br&gt;    &lt;span style=&quot;color:#cc7832;&quot;&gt;try&lt;/span&gt;:&lt;br&gt;        auth_status = session[&lt;span style=&quot;color:#6a8759;&quot;&gt;&quot;auth_status&quot;&lt;/span&gt;]&lt;br&gt;    &lt;span style=&quot;color:#cc7832;&quot;&gt;except &lt;/span&gt;&lt;span style=&quot;color:#8888c6;&quot;&gt;KeyError&lt;/span&gt;:&lt;br&gt;        auth_status = &lt;span style=&quot;color:#6a8759;&quot;&gt;&#39;&#39;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#6a8759;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;if &lt;/span&gt;auth_status == &lt;span style=&quot;color:#6a8759;&quot;&gt;&#39;yes&#39;&lt;/span&gt;:&lt;br&gt;&lt;/pre&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="760" width="460" height="130" as="geometry" />
         </mxCell>
         <mxCell id="x77DFa1c3BVoNbzdy2U2-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="x77DFa1c3BVoNbzdy2U2-18" target="x77DFa1c3BVoNbzdy2U2-19">
           <mxGeometry relative="1" as="geometry" />
@@ -154,6 +154,9 @@
         <mxCell id="x77DFa1c3BVoNbzdy2U2-22" value="Please enable auth page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="485" y="420" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="x77DFa1c3BVoNbzdy2U2-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="x77DFa1c3BVoNbzdy2U2-23" target="x77DFa1c3BVoNbzdy2U2-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="x77DFa1c3BVoNbzdy2U2-23" value="authenticated check" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="730" width="150" height="30" as="geometry" />
         </mxCell>
@@ -177,6 +180,9 @@
         </mxCell>
         <mxCell id="x77DFa1c3BVoNbzdy2U2-37" value="session[&quot;auth_status&quot;] = &quot;authenticated&quot;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="740" y="590" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="x77DFa1c3BVoNbzdy2U2-39" value="Not authenticated" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="710" width="60" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
